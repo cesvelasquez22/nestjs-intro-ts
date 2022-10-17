@@ -2,7 +2,8 @@ import './style.css'
 import typescriptLogo from './typescript.svg'
 import { setupCounter } from './counter'
 // import { name } from './basis/01-types';
-import { bulbasaur, ivysaur } from './basis/02-objects';
+// import { bulbasaur, ivysaur } from './basis/02-objects';
+import { bulbasaur, ivysaur } from './basis/03-classes';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>

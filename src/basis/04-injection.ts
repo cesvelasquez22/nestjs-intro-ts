@@ -1,4 +1,4 @@
-import { PokeAdapter } from "../api/poke.adapter";
+import { HttpAdapter, PokeAdapter, PokeFetchAdapter } from "../api/poke.adapter";
 import { PokeResponse } from "../types/poke.types";
 
 export class Pokemon {
@@ -10,7 +10,7 @@ export class Pokemon {
     public readonly id: number,
     public name: string,
     // TODO: do injection here
-    private http: PokeAdapter
+    private http: HttpAdapter
   ) {}
 
   attack() {
@@ -26,7 +26,7 @@ export class Pokemon {
   }
 
   async getMoves() {
-    const { data } = await this.http.get<PokeResponse>(
+    const data = await this.http.get<PokeResponse>(
       `https://pokeapi.co/api/v2/pokemon/${this.id}`
     );
     return data.moves;
@@ -34,6 +34,7 @@ export class Pokemon {
 }
 
 const pokeAdapter = new PokeAdapter();
+// const pokeFetchAdapter = new PokeFetchAdapter();
 
 export const charmander = new Pokemon(4, "Charmander", pokeAdapter);
 

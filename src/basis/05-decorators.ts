@@ -11,7 +11,7 @@ export class MyPokemon {
 }
 
 const MyDecorator = () => (target: Function) => {
-  //   console.log("target", target);
+    console.log("target", target);
   return MyPokemon;
 };
 

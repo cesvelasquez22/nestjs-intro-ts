@@ -5,7 +5,8 @@ import { setupCounter } from './counter'
 // import { bulbasaur, ivysaur } from './basis/02-objects';
 // import { bulbasaur, ivysaur } from './basis/03-classes';
 // import { charmander } from './basis/04-injection';
-import { charmander } from './basis/05-decorators';
+// import { charmander } from './basis/05-decorators';
+import { charmander } from './basis/06-deprecated';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
